@@ -7,3 +7,18 @@ print('Modified time:', time.ctime(os.path.getmtime(__file__)))
 print('Change time  :', time.ctime(os.path.getctime(__file__)))
 print('Size         :', os.path.getsize(__file__))
 print(__file__)
+
+import os
+
+filename = 'C:\\access_path\\file_name'
+
+stats = os.stat(filename)
+
+print(stats.st_size)
+print(stats.st_mtime)
+print(stats.st_ino)
+print(stats.st_mode)
+print(stats.st_dev)
+print(stats.st_uid)
+print(stats.st_gid)
+
